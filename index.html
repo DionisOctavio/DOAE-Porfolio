@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Octavio | Portfolio</title>
+
+    <!-- Opcional (pixel vibe). Si no quieres dependencias externas, bórralo y se verá con monospace. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid" aria-hidden="true"></div>
+
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="avatar" aria-hidden="true">
+                    <img src="assets/img/perfil.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div>
+                    <h1>OCTAVIO ÁLVAREZ</h1>
+                    <p>Full-Stack Dev · DAM (en curso)</p>
+                </div>
+            </div>
+
+            <nav aria-label="Navegación principal">
+                <button class="tab" data-tab="home" aria-selected="true" aria-controls="view-home">
+                    <span class="dot" aria-hidden="true"></span> Home
+                </button>
+                <button class="tab" data-tab="skills" aria-selected="false" aria-controls="view-skills">
+                    <span class="dot" aria-hidden="true" style="background:rgba(122,167,255,.95)"></span> Skills
+                </button>
+                <button class="tab" data-tab="timeline" aria-selected="false" aria-controls="view-timeline">
+                    <span class="dot" aria-hidden="true" style="background:rgba(255,255,255,.9)"></span> Timeline
+                </button>
+                <button class="tab" data-tab="gallery" aria-selected="false" aria-controls="view-gallery">
+                    <span class="dot" aria-hidden="true" style="background:rgba(255,215,0,.9)"></span> Media
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- LEFT -->
+            <div>
+                <!-- HOME -->
+                <section id="view-home" data-view="home" class="active" aria-label="Home">
+                    <article class="card">
+                        <div class="hd">
+                            <div>
+                                <h2 class="title">ABOUT.ME</h2>
+                                <p class="sub" id="bio-text">
+                                    Soy un desarrollador en formación (DAM) con base en sistemas (SMR) y mucha práctica
+                                    en retos
+                                    cortos tipo hackathon. Me gusta construir cosas “end-to-end”: front, back y
+                                    despliegue.
+                                </p>
+                            </div>
+                            <div class="pillrow" aria-label="Etiquetas">
+                                <span class="pill"><i class="fa-solid fa-crosshairs" style="color:var(--accent)"></i>
+                                    <strong>Focus:</strong> Web + Cloud</span>
+                                <span class="pill"><i class="fa-solid fa-rocket" style="color:var(--accent)"></i>
+                                    <strong>Mindset:</strong> Ship fast</span>
+                            </div>
+                        </div>
+
+                        <div class="bd hero">
+                            <p>
+                                Empecé en informática desde joven (robótica en secundaria), pasé por un grado medio de
+                                sistemas
+                                y redes, y ahí confirmé que lo mío era <b>crear</b>. Después, en prácticas en empresa
+                                trabajé en
+                                equipo y seguí aprendiendo mientras arrancaba DAM.
+                            </p>
+
+                            <div class="kpis" role="list">
+                                <div class="kpi" role="listitem">
+                                    <div class="n">Hackathons</div>
+                                    <div class="t">Retos con empresas (GFT, Hiberus, DXC, NTT Data) + eventos externos.
+                                    </div>
+                                </div>
+                                <div class="kpi" role="listitem">
+                                    <div class="n">Cloud (AWS)</div>
+                                    <div class="t">JAM regional/nacional, GameDay + despliegues reales (S3/CloudFront,
+                                        EC2, RDS…).</div>
+                                </div>
+                                <div class="kpi" role="listitem">
+                                    <div class="n">Proyectos</div>
+                                    <div class="t">Outlaw Grub (full stack en AWS), Protex Wear (serverless), UNNION
+                                        (TFG).</div>
+                                </div>
+                            </div>
+
+                            <div class="btnrow">
+                                <!-- EDITA ESTOS ENLACES -->
+                                <a class="btn" href="https://github.com/DionisOctavio" target="_blank"
+                                    rel="noreferrer">GitHub</a>
+                                <a class="btn secondary"
+                                    href="https://www.linkedin.com/in/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a/"
+                                    target="_blank" rel="noreferrer">LinkedIn</a>
+                                <a class="btn secondary"
+                                    href="mailto:dionisoctavioalvarezescorcia@gmail.com">Contactar</a>
+                            </div>
+
+                            <p class="small muted" style="margin-top:10px">
+                                Tip: cambia el texto, enlaces y añade capturas de tus proyectos.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="card" style="margin-top:16px">
+                        <div class="hd">
+                            <div>
+                                <h2 class="title">FEATURED.PROJECTS</h2>
+                                <p class="sub">Los 3 que más te conviene enseñar primero.</p>
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="grid2">
+                                <div class="box">
+                                    <h3>Outlaw Grub (Champion Burger)</h3>
+                                    <!-- Image Placeholer -->
+                                    <div style="text-align:center;">
+                                        <a href="https://outlawgrub.duckdns.org" target="_blank" rel="noreferrer">
+                                            <img src="assets/img/web-outlaw-grub.jpg" alt="Outlaw Grub Screenshot"
+                                                class="pixel-frame"
+                                                onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'muted small\'>[Imagen no disponible]</span>'">
+                                        </a>
+                                    </div>
+                                    <ul>
+                                        <li>Web completa: tienda + intranet + admin.</li>
+                                        <li>Frontend: HTML/CSS/JS (sin frameworks).</li>
+                                        <li>Backend: Java (J2EE), PostgreSQL en RDS, Tomcat.</li>
+                                        <li>AWS: Route53/ACM, S3+CloudFront, EC2+Nginx, RDS.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="box">
+                                    <h3>Protex Wear (E-commerce)</h3>
+                                    <!-- Image Placeholer -->
+                                    <div style="text-align:center;">
+                                        <a href="https://dev.dw4alzwzez7pl.amplifyapp.com/" target="_blank"
+                                            rel="noreferrer">
+                                            <img src="assets/img/protex-wear.png" alt="Protex Wear Screenshot"
+                                                class="pixel-frame"
+                                                onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'muted small\'>[Imagen no disponible]</span>'">
+                                        </a>
+                                    </div>
+                                    <ul>
+                                        <li>React 18 + TypeScript + Vite.</li>
+                                        <li>AWS Amplify Gen2 (GraphQL + DynamoDB), Cognito, S3.</li>
+                                        <li>Arquitectura serverless + hosting en Amplify.</li>
+                                        <li>Objetivo: B2C + mayoristas + mini CRM interno + asistente IA.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="box" style="grid-column: 1 / -1;">
+                                    <h3>UNNION (TFG) — Plataforma de voluntariado</h3>
+                                    <ul>
+                                        <li>App móvil para unir voluntarios y organizaciones ambientales/emergencias.
+                                        </li>
+                                        <li>Mobile: React Native · Backend: NestJS · Auth: JWT · Chat y mensajería
+                                            escalable.</li>
+                                        <li>Incluye geolocalización, inscripción a actividades, chat y certificación de
+                                            horas.</li>
+                                    </ul>
+                                    <p class="small muted" style="margin-top:10px">
+                                        Basado en el pre-proyecto TFG UNNION. :contentReference[oaicite:7]{index=7}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- SKILLS -->
+                <section id="view-skills" data-view="skills" aria-label="Skills">
+                    <article class="card">
+                        <div class="hd">
+                            <div>
+                                <h2 class="title" style="margin-bottom:6px">SKILLS_DECK v1.0</h2>
+                                <p class="sub">Stack tecnológico mapeado. Hover para info.</p>
+                            </div>
+                        </div>
+
+                        <div class="bd">
+                            <!-- Grid "Teclado / Deck" -->
+                            <div class="deck-grid">
+
+                                <!-- Frontend -->
+                                <div class="key" style="--base:#e34c26; --lit:#ef652a" title="HTML5">
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                                <div class="key" style="--base:#264de4; --lit:#2965f1" title="CSS3">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </div>
+                                <div class="key" style="--base:#f0db4f; --lit:#f7df1e; color:#323330"
+                                    title="JavaScript">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="key" style="--base:#007acc; --lit:#3178c6" title="TypeScript">
+                                    <i class="fa-brands fa-js-square"
+                                        style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);"></i>
+                                    <span
+                                        style="position:absolute;font-size:10px;font-weight:900;margin-top:2px;color:white;text-shadow:0 1px 2px rgba(0,0,0,0.5)">TS</span>
+                                </div>
+                                <div class="key" style="--base:#61dafb; --lit:#a2ecef; color:#20232a" title="React">
+                                    <i class="fa-brands fa-react"></i>
+                                </div>
+                                <div class="key" style="--base:#646cff; --lit:#808aff" title="Vite">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+
+                                <!-- Backend -->
+                                <div class="key" style="--base:#5382a1; --lit:#f89820" title="Java">
+                                    <i class="fa-brands fa-java"></i>
+                                </div>
+                                <div class="key" style="--base:#339933; --lit:#66cc33" title="Node.js">
+                                    <i class="fa-brands fa-node-js"></i>
+                                </div>
+                                <div class="key" style="--base:#e0234e; --lit:#ff4d4d" title="NestJS">
+                                    <i class="fa-solid fa-cat"></i>
+                                </div>
+
+                                <!-- Database -->
+                                <div class="key" style="--base:#336791; --lit:#5a8bbd" title="PostgreSQL">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div class="key" style="--base:#f80000; --lit:#ff4444" title="Oracle">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div class="key" style="--base:#4053d6; --lit:#5c6fd6" title="DynamoDB">
+                                    <i class="fa-solid fa-table"></i>
+                                </div>
+
+                                <!-- Cloud AWS -->
+                                <div class="key wide"
+                                    style="--base:#ff9900; --lit:#ffac31; color:#232f3e; width:100%; grid-column: span 2;"
+                                    title="AWS Ecosystem">
+                                    <i class="fa-brands fa-aws"></i>
+                                </div>
+                                <div class="key" style="--base:#232f3e; --lit:#3e4c5e" title="S3">
+                                    <i class="fa-solid fa-bucket"></i>
+                                </div>
+                                <div class="key" style="--base:#232f3e; --lit:#3e4c5e" title="EC2">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div class="key" style="--base:#ff9900; --lit:#ffac31" title="Lambda">
+                                    <i class="fa-solid fa-cloud"></i>
+                                </div>
+
+                                <!-- Tools -->
+                                <div class="key" style="--base:#f05032; --lit:#f46f48" title="Git">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                </div>
+                                <div class="key" style="--base:#009639; --lit:#41c464" title="Nginx">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <div class="key" style="--base:#f8dc75; --lit:#fceea6; color:#000" title="Tomcat">
+                                    <i class="fa-solid fa-feather"></i>
+                                </div>
+
+                            </div>
+
+                            <div style="margin-top:20px; text-align:center;">
+                                <p class="sub small">Presiona las teclas para "sentir" el click.</p>
+                            </div>
+                        </div>
+
+                        <!-- Soft Skills & Methodologies -->
+                        <div style="border-top:2px solid rgba(38,52,71,.75); padding:18px;">
+                            <h3 style="margin:0 0 16px; font-family:var(--pix); font-size:12px; color:var(--muted)">SOFT
+                                SKILLS & LEADERSHIP</h3>
+                            <div class="grid3"
+                                style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
+
+                                <!-- Colaboración -->
+                                <div class="box">
+                                    <h3 style="display:flex; align-items:center; gap:8px; color:var(--accent)">
+                                        <i class="fa-solid fa-users"></i> EQUIPO & LIDERAZGO
+                                    </h3>
+                                    <ul style="font-size:13px;">
+                                        <li><strong>Trabajo en Equipo:</strong> Colaboración con perfiles distintos y
+                                            coordinación bajo presión.</li>
+                                        <li><strong>Comunicación:</strong> Explicación técnica clara a perfiles no
+                                            técnicos y defensa ante jurados.</li>
+                                        <li><strong>Liderazgo:</strong> Mentoring a compañeros y propuestas técnicas
+                                            proactivas.</li>
+                                        <li><strong>Responsabilidad:</strong> Implicación constante y cumplimiento de
+                                            plazos.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Ejecución -->
+                                <div class="box">
+                                    <h3 style="display:flex; align-items:center; gap:8px; color:var(--accent2)">
+                                        <i class="fa-solid fa-rocket"></i> EJECUCIÓN ÁGIL
+                                    </h3>
+                                    <ul style="font-size:13px;">
+                                        <li><strong>Resolución:</strong> Toma de decisiones rápida y manejo de errores
+                                            en directo (Jams).</li>
+                                        <li><strong>Gestión del Tiempo:</strong> Priorización de funcionalidades
+                                            críticas (MVP) en tiempos cortos.</li>
+                                        <li><strong>Gestión del Estrés:</strong> Rendimiento y calma en entornos
+                                            competitivos críticos.</li>
+                                        <li><strong>Resultados:</strong> Enfoque en entregar producto funcional y que
+                                            aporte valor real.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Mentalidad -->
+                                <div class="box">
+                                    <h3 style="display:flex; align-items:center; gap:8px; color:#f0db4f">
+                                        <i class="fa-solid fa-brain"></i> MENTALIDAD
+                                    </h3>
+                                    <ul style="font-size:13px;">
+                                        <li><strong>Adaptabilidad:</strong> Aprendizaje veloz de nuevas tecnologías
+                                            (AWS, Serverless).</li>
+                                        <li><strong>Pensamiento Crítico:</strong> Evaluación de impacto negocio/técnico
+                                            en cada decisión.</li>
+                                        <li><strong>Profesionalidad:</strong> Comprensión del rol, buenas prácticas y
+                                            respeto por procesos.</li>
+                                        <li><strong>Curiosidad:</strong> Formación continua voluntaria y búsqueda de
+                                            nuevos retos.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- TIMELINE -->
+                <section id="view-timeline" data-view="timeline" aria-label="Timeline">
+                    <article class="card">
+                        <div class="hd">
+                            <div>
+                                <h2 class="title">TIMELINE</h2>
+                                <p class="sub">Tu historia + hitos. Añade/quita eventos sin miedo.</p>
+                            </div>
+                        </div>
+
+                        <div class="bd">
+                            <div class="timeline">
+                                <div class="event">
+                                    <div class="when">SECUNDARIA</div>
+                                    <p class="what">Robótica y primeros pasos en informática</p>
+                                    <p class="desc">Cursos de robótica que te empujan a estudiar tecnología en serio.
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">SMR · 2 AÑOS</div>
+                                    <p class="what">Sistemas Microinformáticos y Redes</p>
+                                    <p class="desc">Conoces el mundo IT desde dentro y descubres que te encanta
+                                        construir productos.</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">PRÁCTICAS</div>
+                                    <p class="what">Experiencia en empresa (STARGLOB / Embou)</p>
+                                    <p class="desc">Trabajo en equipo y continuidad tras prácticas (base real de
+                                        entornos profesionales).</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">DAM · INICIO</div>
+                                    <p class="what">Primera lógica + salto a desarrollo</p>
+                                    <p class="desc">HTML/CSS/JS + Node y primeras apps. Aprendes a entregar bajo
+                                        presión.</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">24 ENE</div>
+                                    <p class="what">Hackathon (GFT) — mini reto full stack</p>
+                                    <p class="desc">Web tipo “Disney” con BD/back/front en 4h. <a target="_blank"
+                                            rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-sanvalerotrainingdays-activity-7291402576166580226-ljY1">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">07 FEB</div>
+                                    <p class="what">Hackathon (Hiberus) — más funcionalidades</p>
+                                    <p class="desc">De “solo front” a “funcional”. <a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-hackatonmispelaedculasfavoritasdisney-activity-7293934602853769216-aIj3">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">21 FEB</div>
+                                    <p class="what">Hackathon (DXC) — plataforma de cursos</p>
+                                    <p class="desc">Web de cursos funcional en 4h. <a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-hackathon-rds-activity-7298728596611764224-74ye">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">31 MAR</div>
+                                    <p class="what">Hackathon (NTT Data) — web interna de vídeos</p>
+                                    <p class="desc">Cierre de training days. <a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_nttstudioscloudedition-sanvalerotrainingdays-activity-7313956488127877120-WtKr">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">THE WAVE · MAR 2025</div>
+                                    <p class="what">Congreso tech en Zaragoza</p>
+                                    <p class="desc">Primera gran experiencia de evento; objetivo: participar en
+                                        hackathon en 2026.</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">10 ABR</div>
+                                    <p class="what">AWS JAM Regional — 2º Aragón</p>
+                                    <p class="desc">Clasificáis a la fase nacional.</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">AWS JAM Nacional</div>
+                                    <p class="what">Top 20 España</p>
+                                    <p class="desc"><a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_awsjam-cloudcomputing-nttdata-activity-7333898853433110528-wbvq">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">PROYECTO FINAL 1º</div>
+                                    <p class="what">Outlaw Grub — web completa + AWS</p>
+                                    <p class="desc"><a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_outlawgrub-proyectofinal-dam-activity-7332712263621021697-7sg6">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">26–28 SEP 2025</div>
+                                    <p class="what">Mobility Hackathon Zaragoza — 3º en puntuación (1er premio)</p>
+                                    <p class="desc"><a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_mobilityhackathon-zaragoza-innovaciaejn-activity-7377429683019116544-MaOg">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">04–05 OCT 2025</div>
+                                    <p class="what">NASA Space Apps Zaragoza — monitor de clima espacial</p>
+                                    <p class="desc"><a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_nasaspaceapps-spaceappszaragoza-hackathon-activity-7393671409689870336-AFXK">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">NOV 2025</div>
+                                    <p class="what">AWS GameDay Nacional — Top 20</p>
+                                    <p class="desc">
+                                        Fase previa + final en Valencia.
+                                        <a target="_blank" rel="noreferrer"
+                                            href="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_awsgameday2025-aws-cloud-activity-7411414861521436672-sXEj">Post</a>
+                                    </p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">DIC → MAR</div>
+                                    <p class="what">Protex Wear — e-commerce serverless</p>
+                                    <p class="desc">Migración de web + mayoristas + mini CRM + asistente IA (MVP).</p>
+                                </div>
+
+                                <div class="event">
+                                    <div class="when">TFG · 2025–2026</div>
+                                    <p class="what">UNNION — voluntariado ambiental/emergencias</p>
+                                    <p class="desc">App móvil con geolocalización, chat y certificación de horas.
+                                        :contentReference[oaicite:12]{index=12}</p>
+                                </div>
+                            </div>
+
+                            <p class="small muted" style="margin-top:14px">
+                                Atajos: <span class="kbd">1</span> Home · <span class="kbd">2</span> Skills · <span
+                                    class="kbd">3</span> Timeline · <span class="kbd">4</span> Media
+                            </p>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- MEDIA / GALLERY -->
+                <section id="view-gallery" data-view="gallery" aria-label="Galería">
+                    <article class="card">
+                        <div class="hd">
+                            <div>
+                                <h2 class="title" style="margin-bottom:6px">MEDIA_GALLERY</h2>
+                                <p class="sub">Bibliografía visual de proyectos.</p>
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="gallery-grid">
+
+                                <!-- Outlaw Grub -->
+                                <div class="gallery-item" data-img="assets/img/web-outlaw-grub.jpg"
+                                    data-title="Outlaw Grub" data-tag="Proyecto Final 1º"
+                                    data-desc="Plataforma completa para gestión de pedidos y administración. Incluye tienda pública, intranet para empleados y panel de administración. [Web: outlawgrub.duckdns.org]"
+                                    data-tech="Java J2EE,AWS EC2+RDS,Tomcat,HTML/CSS"
+                                    data-link="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_outlawgrub-proyectofinal-dam-activity-7332712263621021697-7sg6">
+                                    <div class="g-img">
+                                        <img src="assets/img/web-outlaw-grub.jpg" alt="Outlaw Grub">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Proyecto Final 1º</div>
+                                        <h3 class="g-title">Outlaw Grub</h3>
+                                        <p class="g-desc">Full Stack · Java · AWS</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Protex Wear -->
+                                <div class="gallery-item" data-img="assets/img/protex-wear.png" data-title="Protex Wear"
+                                    data-tag="En Curso"
+                                    data-desc="E-commerce moderno con arquitectura Serverless. Migración de sistema legacy a stack moderno cloud-native con asistente de IA integrado."
+                                    data-tech="React,AWS Amplify,DynamoDB,Cognito,AI"
+                                    data-link="https://dev.dw4alzwzez7pl.amplifyapp.com/">
+                                    <div class="g-img">
+                                        <img src="assets/img/protex-wear.png" alt="Protex Wear">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">En Curso</div>
+                                        <h3 class="g-title">Protex Wear</h3>
+                                        <p class="g-desc">React · Serverless · AI</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- UNNION / TFG -->
+                                <div class="gallery-item" data-img="assets/img/unnion-prototipo.png"
+                                    data-title="UNNION (TFG)" data-tag="TFG 2025-26"
+                                    data-desc="Plataforma de voluntariado ambiental y emergencias. Conecta ONGs y voluntarios con geolocalización y chat."
+                                    data-tech="React Native (Expo),NestJS (TS),PostgreSQL/DynamoDB,AWS RDS"
+                                    data-link="#">
+                                    <div class="g-img">
+                                        <img src="assets/img/unnion-prototipo.png" alt="UNNION">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">TFG</div>
+                                        <h3 class="g-title">UNNION</h3>
+                                        <p class="g-desc">App Voluntariado</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Hackathon GFT -->
+                                <div class="gallery-item" data-img="assets/img/h-gft.jpg"
+                                    data-title="Disney Challenge (GFT)" data-tag="Training Days (24 Ene)"
+                                    data-desc="Mini-hackathon de 4h: desarrollo de web temática tipo 'Disney' con backend y BBDD desde cero."
+                                    data-tech="Node.js,NestJS,HTML/CSS/JS"
+                                    data-link="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-sanvalerotrainingdays-activity-7291402576166580226-ljY1">
+                                    <div class="g-img">
+                                        <img src="assets/img/h-gft.jpg" alt="Hackathon GFT">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">GFT · Training Days</div>
+                                        <h3 class="g-title">Disney Challenge</h3>
+                                        <p class="g-desc">Web App · 4h</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Hackathon Hiberus -->
+                                <div class="gallery-item" data-img="assets/img/h-hiberus.jpg"
+                                    data-title="Reto Funcional (Hiberus)" data-tag="Training Days (7 Feb)"
+                                    data-desc="Segunda parte del reto: añadir funcionalidades complejas a la app Disney (hacerla totalmente funcional)."
+                                    data-tech="Node.js,NestJS,HTML/CSS/JS"
+                                    data-link="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-hackatonmispelaedculasfavoritasdisney-activity-7293934602853769216-aIj3">
+                                    <div class="g-img">
+                                        <img src="assets/img/h-hiberus.jpg" alt="Hackathon Hiberus">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Hiberus · Training Days</div>
+                                        <h3 class="g-title">Reto Funcional</h3>
+                                        <p class="g-desc">Front + Back Logic</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Hackathon DXC -->
+                                <div class="gallery-item" data-img="assets/img/h-dxc.jpg"
+                                    data-title="Plataforma Cursos (DXC)" data-tag="Training Days (21 Feb)"
+                                    data-desc="Desarrollo de una web de cursos mínimamente funcional en 4 horas."
+                                    data-tech="Node.js,NestJS,HTML/CSS/JS"
+                                    data-link="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_sanvalerotrainingdays-hackathon-rds-activity-7298728596611764224-74ye">
+                                    <div class="g-img">
+                                        <img src="assets/img/h-dxc.jpg" alt="Hackathon DXC">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">DXC · Training Days</div>
+                                        <h3 class="g-title">Web Cursos</h3>
+                                        <p class="g-desc">Fullstack en 4h</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Hackathon NTT Data -->
+                                <div class="gallery-item" data-img="assets/img/h-ntt-data.jpg"
+                                    data-title="NTT Studios (NTT Data)" data-tag="Training Days (31 Mar)"
+                                    data-desc="Web interna para gestión de vídeos de empleados. Reto final de los Training Days."
+                                    data-tech="Node.js,NestJS,HTML/CSS/JS"
+                                    data-link="https://www.linkedin.com/posts/alberto-hern%C3%A1ndez-akkari-93bba2201_nttstudioscloudedition-sanvalerotrainingdays-activity-7313956488127877120-WtKr">
+                                    <div class="g-img">
+                                        <img src="assets/img/h-ntt-data.jpg" alt="Hackathon NTT">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">NTT Data · Training Days</div>
+                                        <h3 class="g-title">Web Vídeos</h3>
+                                        <p class="g-desc">Gestión Multimedia</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- KPMG / Prep -->
+                                <div class="gallery-item" data-img="assets/img/h-kpmg.jpg"
+                                    data-title="KPMG: Preparación PF" data-tag="Validación Proyecto (16 May)"
+                                    data-desc="Sesión con KPMG para planificación y validación del proyecto final 'Outlaw Grub'."
+                                    data-tech="Agile Planning,Validación,Arquitectura" data-link="#">
+                                    <div class="g-img">
+                                        <img src="assets/img/h-kpmg.jpg" alt="KPMG">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">KPMG Prep</div>
+                                        <h3 class="g-title">Validación PF</h3>
+                                        <p class="g-desc">Planning Outlaw Grub</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- NASA Space Apps -->
+                                <div class="gallery-item" data-img="assets/img/nasa-space-app-web.jpg"
+                                    data-title="NASA Space Apps Zaragoza" data-tag="Hackathon Mundial (Oct 25)"
+                                    data-desc="Solución utilizando datos abiertos de la NASA. Monitor de clima espacial y tormentas solares."
+                                    data-tech="Consumo APIs,Web Dev,Data Science"
+                                    data-link="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_nasaspaceapps-spaceappszaragoza-hackathon-activity-7393671409689870336-AFXK">
+                                    <div class="g-img">
+                                        <img src="assets/img/nasa-space-app-web.jpg" alt="NASA Space Apps">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Oct 2025</div>
+                                        <h3 class="g-title">NASA Space Apps</h3>
+                                        <p class="g-desc">Monitor Clima Espacial</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- AWS JAM -->
+                                <div class="gallery-item" data-img="assets/img/aws-jam-final.jpg"
+                                    data-title="AWS JAM (Regional + Nacional)" data-tag="Competición Cloud (Abr/Jul)"
+                                    data-desc="2º puesto en Aragón y Top 20 en la final nacional. Retos prácticos de infraestructura cloud."
+                                    data-tech="AWS (EC2/RDS/S3/Route53),Cloud Security"
+                                    data-link="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_awsjam-cloudcomputing-nttdata-activity-7333898853433110528-wbvq">
+                                    <div class="g-img">
+                                        <img src="assets/img/aws-jam-final.jpg" alt="AWS JAM">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Top 20 España</div>
+                                        <h3 class="g-title">AWS JAM</h3>
+                                        <p class="g-desc">Competición Cloud</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- AWS GameDay -->
+                                <div class="gallery-item" data-img="assets/img/primera-fase-aws-gameday.jpg"
+                                    data-title="AWS GameDay Nacional" data-tag="Competición (Nov 26)"
+                                    data-desc="Retos en tiempo real configurando servicios AWS bajo presión sin cortar el servicio. Final en Valencia."
+                                    data-tech="AWS Operations,Chaos Engineering,Resilience"
+                                    data-link="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_awsgameday2025-aws-cloud-activity-7411414861521436672-sXEj">
+                                    <div class="g-img">
+                                        <img src="assets/img/primera-fase-aws-gameday.jpg" alt="AWS GameDay">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">AWS GameDay</div>
+                                        <h3 class="g-title">GameDay League</h3>
+                                        <p class="g-desc">Ops bajo presión</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Mobility Hackathon -->
+                                <div class="gallery-item" data-img="assets/img/movilidad-sostenible.jpg"
+                                    data-title="Mobility Hackathon Zaragoza" data-tag="Hackathon (Sep 25)"
+                                    data-desc="Solución a reto de movilidad urbana sostenible. Ganadores del 1er premio (3º en puntos técnicos)."
+                                    data-tech="Full Stack Web,Pitching,Innovation"
+                                    data-link="https://www.linkedin.com/posts/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a_mobilityhackathon-zaragoza-innovaciaejn-activity-7377429683019116544-MaOg">
+                                    <div class="g-img">
+                                        <img src="assets/img/movilidad-sostenible.jpg" alt="Mobility Hackathon">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Sep 2025</div>
+                                        <h3 class="g-title">Mobility Saragossa</h3>
+                                        <p class="g-desc">1er Premio</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Innovafest -->
+                                <div class="gallery-item" data-img="assets/img/innovafest.jpg"
+                                    data-title="Innovafest Aragón" data-tag="Concurso (Oct-Dic 25)"
+                                    data-desc="Concurso de ideación y exposición de propuestas innovadoras ante jurado profesional."
+                                    data-tech="Ideación,Pitching,Modelo Negocio" data-link="#">
+                                    <div class="g-img">
+                                        <img src="assets/img/innovafest.jpg" alt="Innovafest">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Innovafest</div>
+                                        <h3 class="g-title">Concurso Ideas</h3>
+                                        <p class="g-desc">Ideación + Pitch</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Visita Hiberus -->
+                                <div class="gallery-item" data-img="assets/img/visita-hiberus.jpg"
+                                    data-title="Visita Técnica Hiberus" data-tag="Networking"
+                                    data-desc="Visita a la sede central de Hiberus para conocer estructura organizativa y departamentos tecnológicos."
+                                    data-tech="Networking,Cultura Corporativa" data-link="#">
+                                    <div class="g-img">
+                                        <img src="assets/img/visita-hiberus.jpg" alt="Visita Hiberus">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">Hiberus</div>
+                                        <h3 class="g-title">Visita Sede</h3>
+                                        <p class="g-desc">Conociendo Sector</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                                <!-- Talent Arena -->
+                                <div class="gallery-item" data-img="assets/img/talent-arena.jpg"
+                                    data-title="Talent Arena / Open Gateway" data-tag="MWC (Mar 26)"
+                                    data-desc="Asistencia al Talent Arena en MWC. Charla con Midudev y descubrimiento del Open Gateway Hackathon."
+                                    data-tech="Tendencias Mobile,Networking" data-link="#">
+                                    <div class="g-img">
+                                        <img src="assets/img/talent-arena.jpg" alt="Talent Arena">
+                                    </div>
+                                    <div class="g-info">
+                                        <div class="g-tag">MWC 2026</div>
+                                        <h3 class="g-title">Talent Arena</h3>
+                                        <p class="g-desc">Evento Tech</p>
+                                    </div>
+                                    <div class="click-overlay"></div>
+                                </div>
+
+                            </div>
+
+                            <p class="small muted" style="margin-top:14px; text-align:center">
+                                * Las imágenes reales se están subiendo. Los iconos actúan como placeholder.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <!-- RIGHT -->
+            <aside class="card side" aria-label="Panel lateral">
+                <div class="mini">
+                    <h3>CONTACT</h3>
+                    <p><b>Email:</b> <span class="muted"><a href="mailto:dionisoctavioalvarezescorcia@gmail.com"
+                                class="muted">dionisoctavioalvarezescorcia@gmail.com</a></span></p>
+                    <p><b>Móvil:</b> <span class="muted">682 51 90 71</span></p>
+                    <p><b>Ubicación:</b> <span class="muted">Zaragoza, Aragón</span></p>
+                    <p><b>Carnet:</b> <span class="muted">Tipo B</span></p>
+                </div>
+
+                <div class="mini">
+                    <h3>HIGHLIGHTS</h3>
+                    <ul>
+                        <li>Cloud + retos AWS (JAM / GameDay).</li>
+                        <li>Full stack real (Outlaw Grub en AWS).</li>
+                        <li>Serverless moderno (Protex Wear).</li>
+                        <li>TFG con impacto social (UNNION).</li>
+                    </ul>
+                </div>
+
+                <div class="mini">
+                    <h3>LINKS</h3>
+                    <ul>
+                        <li><a href="https://github.com/DionisOctavio" target="_blank" rel="noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/dionis-octavio-%C3%A1lvarez-escorcia-a1041529a/"
+                                target="_blank" rel="noreferrer">LinkedIn</a></li>
+                        <li><a href="https://drive.google.com/file/d/1FVYAKwX3UeaOVyiEE6ELsAmXlO1OodCn/view?usp=sharing"
+                                target="_blank" rel="noreferrer">Curriculum / CV (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <div class="mini">
+                    <h3>NOTES</h3>
+                    <p>
+                        Minimal + pixel: bordes “a bloques”, tipografía retro (opcional), y grid suave.
+                        Si quieres más “pixel”, sube <span class="muted">--px</span> a 3.
+                    </p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            © <span id="y"></span> · Made with HTML/CSS/JS · “pixel minimal”
+        </footer>
+    </div>
+
+    <!-- MODAL TEMPLATE -->
+    <div id="media-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-img-col">
+                <img id="m-img" src="" alt="" class="pixel-frame">
+            </div>
+            <div class="modal-info-col">
+                <div id="m-tag" class="modal-tag">CATEGORY</div>
+                <h3 id="m-title" class="modal-title">Project Title</h3>
+                <p id="m-desc" class="modal-desc">Description goes here...</p>
+
+                <div id="m-tech" class="modal-tech">
+                    <!-- spans will be injected here -->
+                </div>
+
+                <a id="m-link" href="#" target="_blank" rel="noreferrer" class="modal-link">
+                    <i class="fa-brands fa-linkedin"></i> Ver en LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
