@@ -32,10 +32,25 @@ body {
   margin: 0;
   font-family: var(--font);
   color: var(--text);
-  background: radial-gradient(1200px 800px at 20% 10%, rgba(122, 167, 255, .12), transparent 60%),
-    radial-gradient(1000px 700px at 90% 10%, rgba(124, 255, 196, .10), transparent 55%),
+  background:
+    radial-gradient(circle at 50% 0%, rgba(122, 167, 255, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(124, 255, 196, 0.12), transparent 40%),
     var(--bg);
+  background-size: 180% 180%;
+  animation: bg-breathe 12s ease-in-out infinite alternate;
   overflow-x: hidden;
+}
+
+@keyframes bg-breathe {
+  0% {
+    background-position: 20% 0%;
+    background-size: 180% 180%;
+  }
+
+  100% {
+    background-position: 80% 20%;
+    background-size: 200% 200%;
+  }
 }
 
 /* Pixel grid overlay */
@@ -74,6 +89,21 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Retro CRT Scanline Effect */
+.grid::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }
 
 .animate-in {
@@ -148,6 +178,19 @@ header {
     repeating-linear-gradient(0deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .08) 2px, transparent 2px, transparent 6px);
   position: relative;
   overflow: hidden;
+  animation: float-avatar 6s ease-in-out infinite;
+}
+
+@keyframes float-avatar {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .avatar::after {
@@ -160,10 +203,43 @@ header {
 
 .brand h1 {
   margin: 0;
+  color: #fff;
   font-family: var(--pix);
   font-size: 12px;
   letter-spacing: .6px;
   line-height: 1.3;
+  position: relative;
+}
+
+.brand h1:hover {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  color: var(--accent);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0)
+  }
+
+  20% {
+    transform: translate(-2px, 2px)
+  }
+
+  40% {
+    transform: translate(-2px, -2px)
+  }
+
+  60% {
+    transform: translate(2px, 2px)
+  }
+
+  80% {
+    transform: translate(2px, -2px)
+  }
+
+  100% {
+    transform: translate(0)
+  }
 }
 
 .brand p {
@@ -182,8 +258,8 @@ nav {
 .tab {
   display: flex;
   align-items: center;
+  color: #fff;
   gap: 8px;
-  color: var(--text);
   padding: 10px 12px;
   border-radius: 14px;
   border: var(--px) solid var(--border);
@@ -584,6 +660,27 @@ section[data-view].active {
     0 2px 0 rgba(0, 0, 0, 0.35),
     0 3px 4px rgba(0, 0, 0, 0.3),
     inset 0 2px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Floating animation for keys */
+.key:nth-child(odd) {
+  animation: float-key 4s ease-in-out infinite;
+}
+
+.key:nth-child(even) {
+  animation: float-key 5s ease-in-out infinite reverse;
+}
+
+@keyframes float-key {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
 }
 
 .key.wide {
