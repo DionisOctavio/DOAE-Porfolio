@@ -12,7 +12,7 @@
 
   --radius: 18px;
   --px: 2px;
-  /* “pixel border” thickness */
+  /* "pixel border" thickness */
   --max: 1100px;
 
   --font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -760,6 +760,23 @@ section[data-view].active {
   border-bottom: 1px dashed rgba(124, 255, 196, .5);
 }
 
+/* Upcoming events - highlighted */
+.event.upcoming {
+  border-color: rgba(255, 215, 0, .65);
+  background: linear-gradient(135deg, rgba(255, 215, 0, .12), rgba(255, 165, 0, .08));
+  box-shadow: 0 0 20px rgba(255, 215, 0, .15);
+}
+
+.event.upcoming::before {
+  background: rgba(255, 215, 0, .95);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, .15), 0 0 12px rgba(255, 215, 0, .3);
+}
+
+.event.upcoming .when {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, .4);
+}
+
 /* Right column widgets */
 .side .mini {
   padding: 14px 16px;
@@ -1045,4 +1062,11 @@ footer {
 
 .modal-link:hover {
   filter: brightness(1.1);
+}
+
+/* Click overlay for gallery items */
+.click-overlay {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
 }
